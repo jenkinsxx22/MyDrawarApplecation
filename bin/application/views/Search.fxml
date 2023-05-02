@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="Blankborderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="600.0" style="-fx-border-color: rgb(187,69,55);" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.views.SearchController">
+   <top>
+      <ButtonBar prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: rgb(187,69,55);" BorderPane.alignment="CENTER">
+        <buttons>
+            <AnchorPane prefHeight="40.0" prefWidth="576.0">
+               <children>
+                <Button layoutY="8.0" mnemonicParsing="false" style="-fx-background-color: rgb(197,89,45);" text="Search" />
+                  <TextField layoutX="139.0" layoutY="8.0" style="-fx-background-color: rgb(187,59,45);" />
+               </children>
+            </AnchorPane>
+        </buttons>
+      </ButtonBar>
+   </top>
+   <bottom>
+      <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: rgb(197,89,45);" text="Close" BorderPane.alignment="CENTER" />
+   </bottom>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ListView prefHeight="333.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

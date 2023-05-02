@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="Blankborderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.views.UserController">
+   <top>
+      <AnchorPane prefHeight="40.0" prefWidth="600.0" style="-fx-background-color: rgb(187,69,55);" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="1.0" prefHeight="35.0" prefWidth="600.0" text="User Profile" textFill="#fffdfd">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <Accordion BorderPane.alignment="CENTER">
+        <panes>
+          <TitledPane animated="false" text="Personal Information">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: rgb(187,69,55);">
+                     <children>
+                        <GridPane layoutX="14.0" layoutY="14.0" prefHeight="284.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Full Name">
+                                 <GridPane.margin>
+                                    <Insets left="15.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label text="Email" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets left="15.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label text="Contact" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets left="15.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label text="Phone" GridPane.rowIndex="4">
+                                 <GridPane.margin>
+                                    <Insets left="15.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label text="Address" GridPane.rowIndex="3">
+                                 <GridPane.margin>
+                                    <Insets left="15.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label text="Designation" GridPane.rowIndex="5">
+                                 <GridPane.margin>
+                                    <Insets left="15.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <TextField fx:id="textFullName" style="-fx-background-color: rgb(187,59,45);" GridPane.columnIndex="1">
+                                 <GridPane.margin>
+                                    <Insets right="15.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textEmail" style="-fx-background-color: rgb(187,59,45);" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets right="15.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textContact" style="-fx-background-color: rgb(187,59,45);" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets right="15.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textAddress" style="-fx-background-color: rgb(187,59,45);" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <GridPane.margin>
+                                    <Insets right="15.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textPhone" style="-fx-background-color: rgb(187,59,45);" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                 <GridPane.margin>
+                                    <Insets right="15.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <ComboBox fx:id="textDesignation" prefHeight="25.0" prefWidth="287.0" style="-fx-background-color: rgb(187,59,45);" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                 <GridPane.margin>
+                                    <Insets right="15.0" />
+                                 </GridPane.margin>
+                              </ComboBox>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+          <TitledPane animated="false" text="Login Details">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: rgb(187,69,55);">
+                     <children>
+                        <GridPane layoutX="84.0" layoutY="52.0" prefHeight="284.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Username">
+                                 <GridPane.margin>
+                                    <Insets left="15.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label text="Password" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets left="15.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label text="Confirm" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets left="15.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Button fx:id="btnOK" mnemonicParsing="false" prefHeight="25.0" prefWidth="129.0" style="-fx-background-color: rgb(197,89,45);" text="OK" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <TextField fx:id="textUserName" style="-fx-background-color: rgb(187,59,45);" GridPane.columnIndex="1">
+                                 <GridPane.margin>
+                                    <Insets right="15.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <PasswordField fx:id="textPassword" style="-fx-background-color: rgb(187,59,45);" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets right="15.0" />
+                                 </GridPane.margin>
+                              </PasswordField>
+                              <PasswordField fx:id="textConfirmPassword" style="-fx-background-color: rgb(187,59,45);" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets right="15.0" />
+                                 </GridPane.margin>
+                              </PasswordField>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+          <TitledPane animated="false" text="Access [Admin]">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: rgb(187,69,55);">
+                     <children>
+                        <BorderPane layoutX="27.0" prefHeight="284.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <top>
+                              <HBox prefHeight="34.0" prefWidth="579.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <ComboBox fx:id="comboRole" prefWidth="150.0" />
+                                    <ComboBox fx:id="comboAccess" prefWidth="150.0" />
+                                    <Button fx:id="btnSearch" mnemonicParsing="false" text="Search" />
+                                    <Button fx:id="btnAdd" mnemonicParsing="false" text="Add" />
+                                    <Button fx:id="btnEdit" mnemonicParsing="false" text="Update" />
+                                    <Button fx:id="btnSave" mnemonicParsing="false" text="Save" />
+                                 </children>
+                              </HBox>
+                           </top>
+                           <center>
+                              <TableView fx:id="RolesTable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                <columns>
+                                  <TableColumn fx:id="ColumnRole" prefWidth="256.99999392032623" text="Role" />
+                                  <TableColumn fx:id="ColumnAccess" prefWidth="319.0" text="Access" />
+                                </columns>
+                              </TableView>
+                           </center>
+                        </BorderPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+        </panes>
+      </Accordion>
+   </center>
+   <right>
+      <TableView fx:id="UserTable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="ColumnUserName" prefWidth="92.0" text="Username" />
+          <TableColumn fx:id="ColumnEmail" prefWidth="107.0" text="Email" />
+        </columns>
+      </TableView>
+   </right>
+   <bottom>
+      <AnchorPane prefHeight="28.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnClose" layoutX="274.0" layoutY="2.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" text="Close" />
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>

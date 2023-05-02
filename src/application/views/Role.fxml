@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="Blankborderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.views.RoleController">
+   <top>
+      <AnchorPane prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: rgb(187,69,55);" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="8.0" layoutY="2.0" text="Roles" textFill="#fcf1f1">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </top>
+   <bottom>
+      <Button fx:id="btnClose" mnemonicParsing="false" prefHeight="25.0" prefWidth="103.0" style="-fx-background-color: rgb(187,69,55);" text="Close" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="5.0" top="5.0" />
+         </BorderPane.margin>
+      </Button>
+   </bottom>
+   <left>
+      <AnchorPane prefHeight="335.0" prefWidth="231.0" style="-fx-background-color: rgb(187,69,55);" BorderPane.alignment="CENTER">
+         <children>
+            <GridPane layoutX="-6.0" layoutY="63.0" prefHeight="335.0" prefWidth="236.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="111.0" minWidth="10.0" prefWidth="80.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="176.0" minWidth="10.0" prefWidth="151.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="ID">
+                     <GridPane.margin>
+                        <Insets left="15.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="Name" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="15.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="Group" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="15.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="Stamped" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets left="15.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="By" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets left="15.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <TextField fx:id="textId" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets right="15.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField fx:id="textName" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets right="15.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField fx:id="textCreatedOn" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets right="15.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField fx:id="textCreatedBy" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets right="15.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <ComboBox fx:id="textGroup" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets right="15.0" />
+                     </GridPane.margin>
+                  </ComboBox>
+                  <Button fx:id="btnDelete" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: RED;" text="Delete" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <GridPane.margin>
+                        <Insets left="40.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="btnSave" mnemonicParsing="false" prefHeight="25.0" prefWidth="61.0" style="-fx-background-color: GREEN;" text="Save" GridPane.rowIndex="5">
+                     <GridPane.margin>
+                        <Insets left="15.0" />
+                     </GridPane.margin>
+                  </Button>
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <TableView fx:id="RolesTable" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: rgb(157,69,55);" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="ColumnId" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="ColumnName" prefWidth="165.0" text="Name" />
+            <TableColumn fx:id="ColumnGroup" prefWidth="128.0" text="Group" />
+        </columns>
+      </TableView>
+   </center>
+</BorderPane>
